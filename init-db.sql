@@ -1,4 +1,8 @@
+show databases;
+
 use mysql_db;
+
+show tables;
 
 CREATE TABLE IF NOT EXISTS tasks (
   id SERIAL PRIMARY KEY,
