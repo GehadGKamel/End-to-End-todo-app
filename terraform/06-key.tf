@@ -1,0 +1,4 @@
+resource "aws_key_pair" "ec2" {
+  key_name   = "ec2-key"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDZUjHB7Js9qHm2Zm9zCKWjSO0Oolbqzy62EhXJqsPc2H999hKMjYjkIGu+0CvB3SjTZrPvYmVwTBc3GcfUpPd/AzxihnDborSg6Do+p60/ZdlHWHq+07vs2KRnfkdvh0FoYQkhr4mugwi+DCnHIpf2NiyRcQ9/M2UNnSifF98eY+c8fslgktbL4qVSDNM+9/apPO4cfiKxWtluAqg+wKv5S6WgWGu20rGs9jCKX4E8uO1dkfbSMVsBoC6OXgeoi1j86lux6Mg4aCEsOMqhLLPQN1+HjFdTQue9e+4IZjBaGSSFhk8cVwzxRdwRjjcpFArKediPAjw/Vk27ytNXz0AB7SKpBSzduurRH+XYT04M19zuxgzp/BoEVmhofZfFGwlbkJAHTt0x64aAKJx2mCXU+wEihVXyAlaNLWPYw/fntCa4ICMw84xLHOA7sQXxTEFe7MgsTaib2aO4LPKIZ9H3j4xebFGrq/OHdKfAB/wa9DiW1I4kYfbb0g21L5pEREs= gehad@gehad-Lenovo-ideapad-310-15IKB"
+}
