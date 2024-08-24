@@ -38,6 +38,3 @@ volumes:
 
 networks:
   app-network:
-      
-      
-        

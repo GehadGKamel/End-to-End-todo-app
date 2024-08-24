@@ -1,4 +1,4 @@
-#install mysql image and run 
+#install mysql image and run it
 docker pull mysql:5.7
 
 docker volume create mysql_data 
@@ -22,5 +22,7 @@ docker build -t todo-app-image .
 
 docker compose up --build
   
+# to know the container ip address
 
+docker inspect container_id | grep '"IPAddress"'
 
