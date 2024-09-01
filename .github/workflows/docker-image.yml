@@ -26,7 +26,7 @@ jobs:
 
       - name: Build and push the Docker image
         run: |
-          IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/${{  github.repository }}
+          IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}
           TAG_SHA=${{ steps.vars.outputs.sha_short }}
 
           docker build . --file Dockerfile \
