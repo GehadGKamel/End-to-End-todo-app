@@ -1,0 +1,12 @@
+- name: Upgrade all packages
+  ansible.builtin.dnf:
+    name: "*"
+    state: latest
+
+- name: Install the latest version of nginx, docker
+  ansible.builtin.dnf:
+    name:
+      - nginx
+      - docker.x86_64
+      - git
+    state: present

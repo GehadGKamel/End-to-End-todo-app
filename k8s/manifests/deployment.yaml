@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: todo-app
+  name: todo-app
+  namespace: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: todo-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: todo-app
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        ports:
+        - containerPort: 5000

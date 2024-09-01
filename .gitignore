@@ -1,5 +1,8 @@
+
 venv/
-*-key.tf
+.env
+
+terraform/06-key.tf
 # Local .terraform directories
 **/.terraform/*
 

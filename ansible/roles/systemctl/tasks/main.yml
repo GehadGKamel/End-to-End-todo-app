@@ -1,0 +1,19 @@
+# - name: Make sure nginx unit is stopped
+#   ansible.builtin.systemd:
+#     state: started
+#     name: docker
+
+# - name: Make sure nginx unit is stopped
+#   ansible.builtin.systemd:
+#     state: started
+#     name: nginx
+
+# - name: Clone a repo with separate git directory
+#   ansible.builtin.git:
+#     repo: https://github.com/GehadGKamel/End-to-End-todo-app.git
+#     dest: /home/ec2-user/app
+
+
+- name: Tear down existing services
+  ansible.builtin.shell:
+    shell: docker-compose -f End-to-End-todo-app/docker-compose.yml down -d

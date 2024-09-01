@@ -1,0 +1,8 @@
+- name: Connect to ec2
+  hosts: nodes
+  become: true
+  remote_user: "{{ remote_user }}"
+  roles:
+    # - hello
+    # - yum
+    - systemctl

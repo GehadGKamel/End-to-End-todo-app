@@ -4,10 +4,10 @@ services:
   app:
     build: .
     environment:
-      - DB_HOST=db
-      - DB_USER=root
-      - DB_PASSWORD=my-secret-password
-      - DB_DATABASE=mysql_db
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_DATABASE=${DB_DATABASE}
     depends_on:
       db:
         condition: service_healthy
@@ -22,13 +22,13 @@ services:
       - db_data:/var/lib/mysql
       - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
     healthcheck:
-      test: ["CMD-SHELL", "mysql -h 'localhost' -u 'root' -p'my-secret-password' -e 'SELECT 1'"]
+      test: ["CMD-SHELL", "mysql -h '${DB_HOST}' -u '${DB_USER}' -p'${DB_PASSWORD}' -e 'SELECT 1'"]
       timeout: 20s
       retries: 10
       interval: 10s
     environment:
-      MYSQL_ROOT_PASSWORD: my-secret-password
-      MYSQL_DATABASE: mysql_db
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
     networks:
       - app-network
     ports:

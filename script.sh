@@ -26,3 +26,6 @@ docker compose up --build
 
 docker inspect container_id | grep '"IPAddress"'
 
+
+aws sts get-caller-identity
+aws eks update-kubeconfig --region us-east-1 --name my_cluster
